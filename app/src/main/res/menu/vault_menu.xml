@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_vault_add"
+        android:icon="@drawable/ic_download"
+        android:title="@string/vault_add_files"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_vault_relock"
+        android:icon="@drawable/ic_lock"
+        android:title="@string/vault_relock"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_vault_change_pin"
+        android:title="@string/vault_change_pin"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_vault_auto_lock"
+        android:title="@string/vault_auto_lock"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_vault_restore_all"
+        android:title="@string/vault_restore"
+        app:showAsAction="never" />
+</menu>

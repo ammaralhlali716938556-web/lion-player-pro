@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_search"
+        android:title="@string/search_hint"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+
+    <item
+        android:id="@+id/action_vault"
+        android:icon="@drawable/ic_lock"
+        android:title="@string/vault_name"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_refresh"
+        android:icon="@drawable/ic_refresh"
+        android:title="@string/refresh_media"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_view_mode"
+        android:title="@string/view_mode"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_display_mode"
+        android:title="@string/display_mode"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_sort"
+        android:title="@string/sort_by"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_order"
+        android:title="@string/order_by"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_toggle_extension"
+        android:checkable="true"
+        android:title="@string/show_extensions"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_settings"
+        android:title="@string/settings"
+        app:showAsAction="never" />
+</menu>
