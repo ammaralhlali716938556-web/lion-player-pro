@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lion Player</string>
+    <string name="video_tab">فيديو</string>
+    <string name="audio_tab">صوتيات</string>
+    <string name="all_files_tab">جميع الملفات</string>
+    <string name="favorites_tab">المفضلة</string>
+    <string name="vault_tab">الخزينة</string>
+    <string name="search_hint">بحث</string>
+    <string name="refresh_media">تحديث الوسائط</string>
+    <string name="sort_by">فرز حسب</string>
+    <string name="order_by">ترتيب</string>
+    <string name="view_mode">طريقة العرض</string>
+    <string name="display_mode">أسلوب العرض</string>
+    <string name="show_extensions">إظهار امتداد الملفات</string>
+    <string name="settings">الإعدادات</string>
+    <string name="subtitle_settings">إعدادات الترجمة</string>
+    <string name="audio_tracks">المسارات الصوتية</string>
+    <string name="subtitle_tracks">مسارات الترجمة</string>
+    <string name="content_desc">صورة</string>
+
+    <!-- ============ Secure Vault ============ -->
+    <string name="vault_name">الخزينة السرية</string>
+    <string name="vault_lock_title">الخزينة السرية مقفلة</string>
+    <string name="vault_lock_subtitle">أدخل رمز PIN أو استخدم بصمة الإصبع للمتابعة</string>
+    <string name="vault_pin_hint">أدخل رمز PIN المكوّن من 4–8 أرقام</string>
+    <string name="vault_unlock">فتح الخزينة</string>
+    <string name="vault_use_biometric">فتح بالبصمة</string>
+    <string name="vault_forgot_pin">نسيت الرمز؟</string>
+    <string name="vault_biometric_title">فتح الخزينة السرية</string>
+    <string name="vault_biometric_subtitle">المصادقة ببصمة الإصبع للمتابعة</string>
+    <string name="vault_biometric_negative">استخدام رمز PIN</string>
+    <string name="vault_setup_title">تأمين الخزينة</string>
+    <string name="vault_setup_subtitle">اختر رمز PIN مكوّناً من 4 إلى 8 أرقام</string>
+    <string name="vault_confirm_pin">أعد إدخال رمز PIN</string>
+    <string name="vault_security_question">سؤال الأمان (لاستعادة الرمز)</string>
+    <string name="vault_security_answer">إجابة سؤال الأمان</string>
+    <string name="vault_save">حفظ وتفعيل</string>
+    <string name="vault_recovery_title">استعادة الوصول</string>
+    <string name="vault_recovery_subtitle">أجب على سؤال الأمان ثم عيّن رمز PIN جديد</string>
+    <string name="vault_new_pin">رمز PIN الجديد</string>
+    <string name="vault_reset_pin">إعادة تعيين الرمز</string>
+    <string name="vault_empty">الخزينة فارغة — أضف ملفات من القائمة الرئيسية</string>
+    <string name="vault_add_files">إضافة ملفات</string>
+    <string name="vault_restore">استعادة إلى الذاكرة</string>
+    <string name="vault_delete">حذف نهائي</string>
+    <string name="vault_relock">إعادة القفل</string>
+    <string name="vault_change_pin">تغيير رمز PIN</string>
+    <string name="vault_auto_lock">القفل التلقائي</string>
+    <string name="vault_files_count">عدد الملفات المشفّرة</string>
+</resources>
