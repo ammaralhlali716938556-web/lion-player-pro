@@ -1,0 +1,56 @@
+name: Build Lion Player APK
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: Build Lion Player APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v3
+        with:
+          gradle-version: '8.5'
+
+      - name: Verify project structure
+        run: |
+          echo "== Gradle files =="
+          ls -1 settings.gradle build.gradle gradle.properties app/build.gradle
+          echo "== Kotlin sources =="
+          find app/src/main/java -name '*.kt' | sort
+          echo "== Secure Vault sources =="
+          find app/src/main/java/com/lionplayer/app/vault -name '*.kt' | sort
+          echo "== Layouts =="
+          ls -1 app/src/main/res/layout
+          echo "== Drawables: $(ls app/src/main/res/drawable | wc -l) files =="
+
+      - name: Build Debug APK
+        run: gradle assembleDebug --stacktrace --no-daemon
+
+      - name: Show APK output
+        run: |
+          ls -lh app/build/outputs/apk/debug/
+          echo "APK size:"
+          du -h app/build/outputs/apk/debug/*.apk
+
+      - name: Upload Debug APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: LionPlayer-SecureVault-Debug-APK
+          path: app/build/outputs/apk/debug/*.apk
+          retention-days: 14
