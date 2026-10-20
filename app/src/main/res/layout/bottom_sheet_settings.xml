@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <View
+        android:layout_width="42dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_sheet_handle" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="@string/settings"
+        android:textColor="@color/text_primary"
+        android:textSize="17sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvSettingsTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:background="@drawable/bg_settings_card"
+        android:padding="14dp"
+        android:text="مظهر التطبيق (السمة)"
+        android:textColor="@color/text_primary"
+        android:textSize="14sp" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switchVolumeBoost"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:text="مضاعفة الصوت حتى 200%"
+        android:textColor="@color/text_primary" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switchBluetooth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="التحكم عبر سماعة البلوتوث"
+        android:textColor="@color/text_primary" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switchLyrics"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="إظهار كلمات الأغاني"
+        android:textColor="@color/text_primary" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switchExtensions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="إظهار امتداد الملفات"
+        android:textColor="@color/text_primary" />
+
+    <com.google.android.material.materialswitch.MaterialSwitch
+        android:id="@+id/switchVaultSecure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="منع لقطات الشاشة داخل الخزينة (FLAG_SECURE)"
+        android:textColor="@color/text_primary" />
+
+    <TextView
+        android:id="@+id/tvSettingsVault"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_settings_card"
+        android:drawablePadding="10dp"
+        android:padding="14dp"
+        android:text="@string/vault_name"
+        android:textColor="@color/primary"
+        android:textSize="14sp" />
+
+</LinearLayout>
