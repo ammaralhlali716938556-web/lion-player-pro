@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#FF9800</color>
+    <color name="primary_dark">#E65100</color>
+    <color name="accent">#FFB74D</color>
+
+    <color name="app_background">#F5F5F7</color>
+    <color name="app_surface">#FFFFFF</color>
+    <color name="app_card">#FFFFFF</color>
+    <color name="divider">#E2E8F0</color>
+    <color name="input_background">#EDF2F7</color>
+    <color name="text_primary">#1A202C</color>
+    <color name="text_secondary">#718096</color>
+    <color name="scrim">#14000000</color>
+
+    <color name="windowBackground">@color/app_background</color>
+    <color name="surface">@color/app_surface</color>
+    <color name="cardBackground">@color/app_card</color>
+
+    <!-- Secure Vault -->
+    <color name="vault_background">#0B0F19</color>
+    <color name="vault_surface">#141B2D</color>
+    <color name="vault_card">#1B2338</color>
+    <color name="vault_accent">#00E5A0</color>
+    <color name="vault_accent_dark">#00B884</color>
+    <color name="vault_text">#FFFFFF</color>
+    <color name="vault_text_secondary">#94A3B8</color>
+    <color name="vault_error">#FF5252</color>
+</resources>
