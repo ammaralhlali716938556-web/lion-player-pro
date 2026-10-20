@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- ================= Media permissions ================= -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="29"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- ================= Secure Vault permissions ================= -->
+    <!-- androidx.biometric uses USE_BIOMETRIC (and USE_FINGERPRINT for legacy devices) -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <uses-feature
+        android:name="android.hardware.fingerprint"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.biometrics"
+        android:required="false" />
+
+    <application
+        android:name=".LionPlayerApp"
+        android:allowBackup="false"
+        android:dataExtractionRules="@null"
+        android:fullBackupContent="false"
+        android:icon="@drawable/ic_lion_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/ic_lion_logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:targetApi="31">
+
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            tools:ignore="LockedOrientationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout|smallestScreenSize"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme" />
+
+        <activity
+            android:name=".ui.PlayerActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout|smallestScreenSize"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:supportsPictureInPicture="true"
+            android:theme="@style/AppTheme" />
+
+        <!-- ================= Secure Vault activities ================= -->
+        <!-- Lock gate: PIN + biometric. FLAG_SECURE set in code -->
+        <activity
+            android:name=".vault.VaultLockActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:theme="@style/VaultTheme"
+            tools:ignore="LockedOrientationActivity" />
+
+        <!-- First-run vault setup (PIN + security question) -->
+        <activity
+            android:name=".vault.VaultSetupActivity"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/VaultTheme"
+            tools:ignore="LockedOrientationActivity" />
+
+        <!-- Encrypted files browser. FLAG_SECURE blocks screenshots/screen recording -->
+        <activity
+            android:name=".vault.VaultActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout|smallestScreenSize"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTask"
+            android:theme="@style/VaultTheme" />
+
+        <receiver
+            android:name=".receiver.NotificationReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.lionplayer.app.ACTION_NOTIF_PREV" />
+                <action android:name="com.lionplayer.app.ACTION_NOTIF_PLAY_PAUSE" />
+                <action android:name="com.lionplayer.app.ACTION_NOTIF_NEXT" />
+                <action android:name="com.lionplayer.app.ACTION_NOTIF_CLOSE" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>
